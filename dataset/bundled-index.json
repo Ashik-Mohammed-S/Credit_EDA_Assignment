@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "files": {
+    "application_data.csv": {
+      "sha256": "52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f",
+      "uncompressed_bytes": 166133370,
+      "storage": "gzip_parts",
+      "parts": [
+        {
+          "path": "bundled/application_data.csv.gz.part000",
+          "sha256": "14282bdb79441ca90b9c14a1dcb05db57d90e9ae421fec55fdcce215d4e16b19",
+          "bytes": 33554432
+        },
+        {
+          "path": "bundled/application_data.csv.gz.part001",
+          "sha256": "e39a497089cf7a14425ed6d60907f4159f5607137748c21822ca1c4cf57871ed",
+          "bytes": 2635578
+        }
+      ]
+    },
+    "previous_application.csv": {
+      "sha256": "5046cd657ee04df2eaa6dc8308ae86be6b3b1763674a3f63574886a2f2896505",
+      "uncompressed_bytes": 404973293,
+      "storage": "gzip_parts",
+      "parts": [
+        {
+          "path": "bundled/previous_application.csv.gz.part000",
+          "sha256": "62a173d9c6286ff6be588a34e0cac9d62629bf1f8c585a32ad38a9753c9d6e3e",
+          "bytes": 33554432
+        },
+        {
+          "path": "bundled/previous_application.csv.gz.part001",
+          "sha256": "da723fb918728f6f1756e169c16c3d98ae67eba6290a648fb3150c9cbcb78dc9",
+          "bytes": 33554432
+        },
+        {
+          "path": "bundled/previous_application.csv.gz.part002",
+          "sha256": "d3681609639d7e930ab8005db37f87a359929a0b64434a9785f821a547381c70",
+          "bytes": 10269828
+        }
+      ]
+    }
+  }
+}
