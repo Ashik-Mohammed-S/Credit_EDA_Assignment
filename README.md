@@ -1,5 +1,12 @@
 # Applicant-Level Credit Risk EDA
 
+## Expanded EDA and interactive dashboard
+
+[Open Analytics Lens](https://ashik-analytics-lens.swoonysnipe19.chatgpt.site) · [Dashboard and method guide](DASHBOARD.md) · [Current findings](analysis/EDA_FINDINGS.md)
+
+The expanded workflow covers **159 source columns (122 current + 37 previous) and 137 current-applicant analytical variables over all 307,511 applicants**. It restores all-column source profiles, missing/unknown analysis, numeric target-group summaries, categorical rates with Wilson intervals, IQR flags, selected correlations and bivariate views. The dashboard adds four simultaneous cohort filters, a searchable variable explorer, relationship heatmaps, raw source audits and CSV exports. See the method guide for filtered versus full-source scope.
+
+
 [![Validation](https://github.com/Ashik-Mohammed-S/Credit_EDA_Assignment/actions/workflows/validate.yml/badge.svg)](https://github.com/Ashik-Mohammed-S/Credit_EDA_Assignment/actions/workflows/validate.yml)
 
 Describe repayment difficulty without overweighting applicants who have more historical loans.
