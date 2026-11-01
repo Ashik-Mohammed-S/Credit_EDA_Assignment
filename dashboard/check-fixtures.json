@@ -1,0 +1,162 @@
+[
+  {
+    "selected": [
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "n": 307511,
+    "positive": 24825,
+    "numeric": {
+      "age_years": {
+        "count": 307511,
+        "mean": 43.906899566990106
+      },
+      "employment_years": {
+        "count": 252137,
+        "mean": 6.527499862048478
+      }
+    }
+  },
+  {
+    "selected": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "n": 12521,
+    "positive": 995,
+    "numeric": {
+      "age_years": {
+        "count": 12521,
+        "mean": 35.15821310684019
+      },
+      "employment_years": {
+        "count": 12521,
+        "mean": 5.041086511963119
+      }
+    }
+  },
+  {
+    "selected": [
+      4,
+      2,
+      1,
+      7
+    ],
+    "n": 1,
+    "positive": 0,
+    "numeric": {
+      "age_years": {
+        "count": 1,
+        "mean": 29.149897330595483
+      },
+      "employment_years": {
+        "count": 1,
+        "mean": 3.36208076659822
+      }
+    }
+  },
+  {
+    "selected": [
+      999,
+      -1,
+      -1,
+      -1
+    ],
+    "n": 0,
+    "positive": 0,
+    "numeric": {
+      "age_years": {
+        "count": 0,
+        "mean": null
+      },
+      "employment_years": {
+        "count": 0,
+        "mean": null
+      }
+    }
+  },
+  {
+    "selected": [
+      0,
+      -1,
+      -1,
+      -1
+    ],
+    "n": 82331,
+    "positive": 7897,
+    "numeric": {
+      "age_years": {
+        "count": 82331,
+        "mean": 35.120552585554485
+      },
+      "employment_years": {
+        "count": 81829,
+        "mean": 5.517525524777389
+      }
+    }
+  },
+  {
+    "selected": [
+      -1,
+      0,
+      -1,
+      -1
+    ],
+    "n": 202448,
+    "positive": 14170,
+    "numeric": {
+      "age_years": {
+        "count": 202448,
+        "mean": 45.18140226461783
+      },
+      "employment_years": {
+        "count": 157177,
+        "mean": 6.988014040349327
+      }
+    }
+  },
+  {
+    "selected": [
+      -1,
+      -1,
+      0,
+      -1
+    ],
+    "n": 278232,
+    "positive": 23221,
+    "numeric": {
+      "age_years": {
+        "count": 278232,
+        "mean": 44.24163192249471
+      },
+      "employment_years": {
+        "count": 226224,
+        "mean": 6.6063435203012
+      }
+    }
+  },
+  {
+    "selected": [
+      -1,
+      -1,
+      -1,
+      0
+    ],
+    "n": 10,
+    "positive": 0,
+    "numeric": {
+      "age_years": {
+        "count": 10,
+        "mean": 44.00246406570842
+      },
+      "employment_years": {
+        "count": 10,
+        "mean": 7.869404517453799
+      }
+    }
+  }
+]

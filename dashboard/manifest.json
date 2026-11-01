@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "project": "credit",
+  "file": "credit.json.gz",
+  "sha256": "be9ea2cf270283174dee80a6862179dfbb0ef35b58c7c6fd2ca8efce531d617b",
+  "uncompressed_bytes": 1618501,
+  "compressed_bytes": 459704,
+  "rows": 307511,
+  "positive": 24825,
+  "variables": 137,
+  "source_profile_columns": 159,
+  "strata": 117,
+  "unit": "one current application / applicant record"
+}
