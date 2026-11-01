@@ -1,28 +1,46 @@
-# Credit_EDA_Assignment
-Introduction
-This assignment aims to give you an idea of applying EDA in a real business scenario. In this assignment, apart from applying the techniques that you have learnt in the EDA module, you will also develop a basic understanding of risk analytics in banking and financial services and understand how data is used to minimise the risk of losing money while lending to customers.
+# Applicant-Level Credit Risk EDA
 
-Business Understanding
-The loan providing companies find it hard to give loans to the people due to their insufficient or non-existent credit history. Because of that, some consumers use it to their advantage by becoming a defaulter. Suppose you work for a consumer finance company which specialises in lending various types of loans to urban customers. You have to use EDA to analyse the patterns present in the data. This will ensure that the applicants capable of repaying the loan are not rejected.
-When the company receives a loan application, the company has to decide for loan approval based on the applicant’s profile. Two types of risks are associated with the bank’s decision:
-If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
-If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company.
-The data given below contains the information about the loan application at the time of applying for the loan. It contains two types of scenarios:
-The client with payment difficulties: he/she had late payment more than X days on at least one of the first Y instalments of the loan in our sample,
-All other cases: All other cases when the payment is paid on time.
-When a client applies for a loan, there are four types of decisions that could be taken by the client/company):
-Approved: The Company has approved loan Application
-Cancelled: The client cancelled the application sometime during approval. Either the client changed her/his mind about the loan or in some cases due to a higher risk of the client, he received worse pricing which he did not want.
-Refused: The company had rejected the loan (because the client does not meet their requirements etc.).
-Unused offer: Loan has been cancelled by the client but at different stages of the process.
+[![Validation](https://github.com/Ashik-Mohammed-S/Credit_EDA_Assignment/actions/workflows/validate.yml/badge.svg)](https://github.com/Ashik-Mohammed-S/Credit_EDA_Assignment/actions/workflows/validate.yml)
 
-In this case study, you will use EDA to understand how consumer attributes and loan attributes influence the tendency to default.
+Describe repayment difficulty without overweighting applicants who have more historical loans.
 
-Business Objectives:
+Independent public portfolio work; historical educational notebooks remain under `historical/`. The current implementation and results described here take precedence over historical in-sample numbers.
 
-This case study aims to identify patterns which indicate if a client has difficulty paying their instalments which may be used for taking actions such as denying the loan, reducing the amount of loan, lending (to risky applicants) at a higher interest rate, etc. This will ensure that the consumers capable of repaying the loan are not rejected. Identification of such applicants using EDA is the aim of this case study.
-In other words, the company wants to understand the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default.  The company can utilise this knowledge for its portfolio and risk assessment.
+## Data and approach
 
-## Current analysis and local datasets
+307,511 current applications and 1,670,214 previous applications, stored as checksum-verified compressed parts.
 
-See [ANALYSIS.md](ANALYSIS.md) for the target-aware workflow and [DATA.md](DATA.md) for the stored reference data. The primary notebook runs the full current analysis; earlier walkthroughs are preserved in historical/.
+Aggregate previous applications by SK_ID_CURR before a one-to-one left join. Report target rates with observation counts across applicant groups instead of presenting exploratory associations as a deployed risk model.
+
+## Current full-data result
+
+| Measure | Current analysis | Baseline where applicable |
+| --- | --- | --- |
+| Current applications | 307,511 | — |
+| Previous applications | 1,670,214 | — |
+| Positive TARGET applications | 24,825 | — |
+| Observed target rate | 8.073% | — |
+
+Results are specific to the documented dataset and split. See generated `results/analysis.json` after execution for full metrics and assumptions.
+
+## Run locally
+
+Use the Python version in `.python-version`, then:
+
+```sh
+python -m pip install -r requirements.txt
+python scripts/fetch_data.py
+python scripts/run_notebook.py --mode full
+```
+
+Reference data is committed under `dataset/`, directly or as reconstructable compressed parts. The downloader verifies checksums and restores stored data offline. See [DATA.md](DATA.md) and [dataset-sources.json](dataset-sources.json) for provenance and upstream terms. Package installation and the spaCy model, where needed, require network access on a fresh machine.
+
+## Review the implementation
+
+Inspect the aggregation grain, one-to-one merge validation and group denominators. Start with [scripts/analysis.py](scripts/analysis.py), then the root notebook. The workflow validates dependencies, smoke checks and full-data notebook execution with dataset downloads disabled.
+
+## Limitations
+
+Descriptive historical analysis, not lending advice, causal inference or an automated eligibility decision. Source-group differences need context and cannot justify individual credit decisions.
+
+[Method notes](ANALYSIS.md) · [All portfolio projects](https://github.com/Ashik-Mohammed-S/Ashik-Mohammed-S/blob/main/PORTFOLIO.md)
